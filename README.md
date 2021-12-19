@@ -4,21 +4,6 @@
 
 Welcome. This is our Star Wars Backend Challenge!
 
-Our main goal is to evaluate your coding and presentation skills.
-When you feel ready to submit your answers, use the link we sent to your e-mail to post your Github Repo!
-We will send you further instructions and your feedback then.
-
-<!-- Quando sua solução estiver pronta, basta responder o e-mail que recebeu com o link do seu repo aqui no Github!
-Em seguida, enviaremos o feedback e as instruções dos próximos passos! -->
-Any questions, don't hesitate to contact us on *contato.steamgroups@gmail.com*
-Happy Hacking💙!
-<!-- Caso tenha alguma dúvida, nós estamos disponíveis no email *contato.steamgroups@gmail.com*
-Bom desafio! -->
-
-> ⚠️ **Remember, your repository must be public, otherwise we won't be able to evaluate your answer**
-
----
-
 ## Table of Contents
 
 - [🧠 Context](#-context)
