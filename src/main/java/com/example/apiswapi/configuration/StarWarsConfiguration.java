@@ -17,4 +17,7 @@ public class StarWarsConfiguration {
 
     @Value("${starwars.people}")
     public String starWarsPeople;
+
+    @Value("${starwars.planets}")
+    public String starWarsPlanets;
 }

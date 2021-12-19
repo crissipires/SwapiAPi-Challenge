@@ -5,12 +5,11 @@ import com.example.apiswapi.model.AllFilmsResponse;
 import com.example.apiswapi.model.PeopleResponse;
 import com.example.apiswapi.model.FilmsResponse;
 import lombok.AllArgsConstructor;
+import org.apache.logging.log4j.util.PropertySource;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+import java.util.stream.Collectors;
 
 @Service
 @AllArgsConstructor
@@ -23,11 +22,15 @@ public class FilmsService {
 
     public Map<String, Integer> getCharactersAppearMost(){
         Map<String,Integer> mostAppear = new HashMap<>();
+
         for (String charactersByFilm : getCharactersByFilms()) {
             mostAppear.compute(charactersByFilm, (k,v) -> v == null ? 1 : v + 1);
         }
 
-        return mostAppear;
+        return mostAppear.entrySet()
+                .stream()
+                .sorted(Map.Entry.comparingByValue())
+                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
     }
 
     private List<String> getCharactersByFilms(){

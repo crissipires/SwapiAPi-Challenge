@@ -19,7 +19,7 @@ public class FilmsController {
         return ResponseEntity.ok(filmsService.getFilms());
     }
 
-    @GetMapping("/starwars/appearMost")
+    @GetMapping("/starwars/characters/appearmost")
     public ResponseEntity<Map<String, Integer>> getFilm() {
         return ResponseEntity.ok(filmsService.getCharactersAppearMost());
     }
