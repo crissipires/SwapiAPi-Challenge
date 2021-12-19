@@ -83,9 +83,10 @@ In addition to the requirements raised above, we will look at the following crit
   - [ ] README must be in English;
 
 
-### You can:
+<!-- ### You can:
 :information_source: _Feel free to include all the observations you may find necessary_
 
 ---
 
 Made with 💙 by SteamGroups
+ -->
