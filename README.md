@@ -48,8 +48,8 @@ The challenge is far, far simple: you must get the data asked at [You Must](#-yo
 
 #### 🤟 You Must:
 
-- [x] Code in Java
-- [x] You must find the characters who appear the most in the SW movies (you can put them in order if you want);
+- [ ] Code in Java
+- [ ] You must find the characters who appear the most in the SW movies (you can put them in order if you want);
 - [ ] Obtain the Planets Size (Area) and order them (bigger to smaller);
 - [ ] Verify how many pilots did the Millenium Falcon had and who were they?;
 - [ ] Present the results the best way you can
@@ -87,8 +87,8 @@ In addition to the requirements raised above, we will look at the following crit
 
 ### :notebook: To-do list
 
-- [ ] Fully take the challenge
-  - [ ] find the characters who appear the most in the SW movies;
+- [x] Fully take the challenge
+  - [x] find the characters who appear the most in the SW movies;
   - [ ] Get the Area of the planets and sort from Largest to Smallest;
   - [ ] Check how many people have piloted our dear Millennium Falcon and display their names;
 - [ ] Include details of your solution in the README
