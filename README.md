@@ -74,7 +74,7 @@ In addition to the requirements raised above, we will look at the following crit
 
 - [x] Fully take the challenge
   - [x] find the characters who appear the most in the SW movies;
-  - [ ] Get the Area of the planets and sort from Largest to Smallest;
+  - [x] Get the Area of the planets and sort from Largest to Smallest;
   - [ ] Check how many people have piloted our dear Millennium Falcon and display their names;
 - [ ] Include details of your solution in the README
   - [ ] what was accomplished in the challenge;
