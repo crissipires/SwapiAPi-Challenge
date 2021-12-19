@@ -1,5 +1,5 @@
 package com.example.apiswapi.repository;
 
-public interface FilmsReposiroty extends {
+public interface FilmsReposiroty {
 
 }

@@ -12,9 +12,9 @@ public class StarWarsConfiguration {
     @Value("${starwars.base-url}")
     public String starWarsUrl;
 
-    @Value("${starwars.peoples}")
-    public String starWarsPeoples;
-
     @Value("${starwars.films}")
     public String starWarsFilms;
+
+    @Value("${starwars.people}")
+    public String starWarsPeople;
 }

@@ -8,7 +8,7 @@ import org.springframework.web.reactive.function.client.WebClient;
 
 @Configuration
 public class BeanConfiguration {
-    private String starWarsUrl;
+    private final String starWarsUrl;
 
     public BeanConfiguration(StarWarsConfiguration starWarsConfiguration) {
         this.starWarsUrl = starWarsConfiguration.starWarsUrl;
@@ -16,7 +16,8 @@ public class BeanConfiguration {
 
     @Bean
     public WebClient webClient(WebClient.Builder builder){
-        return builder.baseUrl(starWarsUrl)
+        return builder
+                .baseUrl(starWarsUrl)
                 .defaultHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
                 .build();
     }
