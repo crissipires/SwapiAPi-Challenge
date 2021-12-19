@@ -1,10 +1,7 @@
 package com.example.apiswapi.components;
 
 import com.example.apiswapi.configuration.StarWarsConfiguration;
-import com.example.apiswapi.model.AllFilmsResponse;
-import com.example.apiswapi.model.AllPlanetsResponse;
-import com.example.apiswapi.model.PeopleResponse;
-import com.example.apiswapi.model.PlanetResponse;
+import com.example.apiswapi.model.*;
 import lombok.Getter;
 import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Component;
@@ -17,6 +14,7 @@ public class StarWarsWebClient {
     private final String allFilmsResource;
     private final String peopleResource;
     private final String planetsResource;
+    private final String starShipResource;
     private WebClient webClient;
 
     public StarWarsWebClient(WebClient webClient, StarWarsConfiguration starWarsConfiguration) {
@@ -24,6 +22,7 @@ public class StarWarsWebClient {
         this.peopleResource = starWarsConfiguration.starWarsPeople;
         this.allFilmsResource = starWarsConfiguration.starWarsFilms;
         this.planetsResource = starWarsConfiguration.starWarsPlanets;
+        this.starShipResource = starWarsConfiguration.starWarsStarship;
     }
 
     public AllFilmsResponse getAllfilms(){
@@ -50,6 +49,15 @@ public class StarWarsWebClient {
                 .uri(planetsResource)
                 .retrieve()
                 .bodyToMono(AllPlanetsResponse.class)
+                .block();
+    }
+
+    public StarshipResponse getStarship(Integer id){
+        return webClient
+                .method(HttpMethod.GET)
+                .uri(starShipResource, id)
+                .retrieve()
+                .bodyToMono(StarshipResponse.class)
                 .block();
     }
 }

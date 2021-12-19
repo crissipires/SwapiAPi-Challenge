@@ -14,7 +14,7 @@ import java.util.List;
 public class PlanetsController {
     private PlanetsService planetsService;
 
-    @GetMapping("/starwars/planets")
+    @GetMapping("/starwars/planetsArea")
     public ResponseEntity<List<PlanetResponse>> getFilms() {
         return ResponseEntity.ok(planetsService.getPlanets());
     }

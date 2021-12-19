@@ -14,11 +14,6 @@ import java.util.Map;
 public class FilmsController {
     private final FilmsService filmsService;
 
-    @GetMapping("/starwars/films")
-    public ResponseEntity<AllFilmsResponse> getFilms() {
-        return ResponseEntity.ok(filmsService.getFilms());
-    }
-
     @GetMapping("/starwars/characters/appearmost")
     public ResponseEntity<Map<String, Integer>> getFilm() {
         return ResponseEntity.ok(filmsService.getCharactersAppearMost());

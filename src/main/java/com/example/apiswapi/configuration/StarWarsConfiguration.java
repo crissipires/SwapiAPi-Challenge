@@ -20,4 +20,7 @@ public class StarWarsConfiguration {
 
     @Value("${starwars.planets}")
     public String starWarsPlanets;
+
+    @Value("${starwars.starship}")
+    public String starWarsStarship;
 }

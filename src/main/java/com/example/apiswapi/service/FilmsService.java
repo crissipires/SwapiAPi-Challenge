@@ -13,11 +13,8 @@ import java.util.stream.Collectors;
 @Service
 @AllArgsConstructor
 public class FilmsService {
-    private final StarWarsWebClient starWarsWebClient;
 
-    public AllFilmsResponse getFilms() {
-        return starWarsWebClient.getAllfilms();
-    }
+    private final StarWarsWebClient starWarsWebClient;
 
     public Map<String, Integer> getCharactersAppearMost(){
         Map<String,Integer> mostAppear = new HashMap<>();
