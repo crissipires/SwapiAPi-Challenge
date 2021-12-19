@@ -2,10 +2,9 @@ package com.example.apiswapi.service;
 
 import com.example.apiswapi.components.StarWarsWebClient;
 import com.example.apiswapi.model.AllFilmsResponse;
+import com.example.apiswapi.model.FilmResponse;
 import com.example.apiswapi.model.PeopleResponse;
-import com.example.apiswapi.model.FilmsResponse;
 import lombok.AllArgsConstructor;
-import org.apache.logging.log4j.util.PropertySource;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
@@ -37,7 +36,7 @@ public class FilmsService {
         AllFilmsResponse allfilms = starWarsWebClient.getAllfilms();
         List<String> allCharacter = new ArrayList<>();
 
-        for (FilmsResponse result : allfilms.getResults()) {
+        for (FilmResponse result : allfilms.getResults()) {
             for (String character : result.getCharacters()) {
                 Integer idByUrl = getIdByUrl(character);
                 PeopleResponse people = starWarsWebClient.getPeople(idByUrl);
