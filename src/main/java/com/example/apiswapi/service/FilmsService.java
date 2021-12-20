@@ -18,7 +18,6 @@ public class FilmsService {
 
     public Map<String, Integer> getCharactersAppearMost(){
         Map<String,Integer> mostAppear = new HashMap<>();
-
         for (String charactersByFilm : getCharactersByFilms()) {
             mostAppear.compute(charactersByFilm, (k,v) -> v == null ? 1 : v + 1);
         }

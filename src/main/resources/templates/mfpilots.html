@@ -1,0 +1,39 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="ISO-8859-1">
+  <title>Google Charts Example - Spring Boot</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+<body>
+<div align="center" style="width: 1000px;">
+  <h1>Pilots of Millenium Falcon</h1>
+  <h2>The 4 pilot's name:</h2>
+  <div id="table_div" style="width: 900px; height: 400px;"></div>
+</div>
+<script type="text/javascript" th:inline="javascript">
+  var real_data = /*[[${chartData}]]*/'noValue';
+  $(document).ready(function() {
+    google.charts.load('current', {'packages':['table']});
+    google.charts.setOnLoadCallback(drawTable);
+  });
+
+  function drawTable() {
+    var data = new google.visualization.DataTable();
+    data.addColumn('string', 'name');
+    var dataArray = [];
+    $.each(real_data, function(i, obj) {
+      dataArray.push([ obj]);
+    });
+
+    data.addRows(dataArray);
+
+    var table = new google.visualization.Table(document.getElementById('table_div'));
+
+    table.draw(data, {showRowNumber: true, width: '100%', height: '100%'});
+  }
+</script>
+</body>
+</html>
