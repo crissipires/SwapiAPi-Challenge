@@ -106,15 +106,19 @@ To solve this problem i use:
 According to the Spring documentation, Webflux is Spring's reactive stack that was added from version 5 of the framework that is present in Springboot version 2.0 or higher. With it it is possible to make synchronous and asynchronous calls.
 
 The Components package is where i access the star wars api and return the information I need.
+
 The Configuration package where i configure all application beans. 
-The Controller class calls the view and maps each request to a service layer routine.
+
+The Controller classes calls the view and maps each request to a service layer routine.
+
 The Service class implements all of the business logic of the application.
+
 The Model package the entity structure of each call and transforms the response into a flow
 
 
 ### 📉 Visualization of the obtained data
 
-#### Base url = ```http://localhost:8080/starwars/```
+#### Base url = ```http://localhost:8080/starwars```
 
 Path = ```/characters/appearmost```
 
